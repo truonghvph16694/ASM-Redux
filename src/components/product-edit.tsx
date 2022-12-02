@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useEditProductMutation, useGetProductQuery } from "../apiSlice/product";
 import { useAppDispatch } from "../app/hook";
 import { IProduct } from "../interfaces/product";
+import { fetchProduct } from "../slice/product";
 
 
 type Props = {};
@@ -18,35 +19,46 @@ const ProductEdit = (props: Props) => {
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
     const { id } = useParams();
-    // console.log(id);
     const [editProduct] = useEditProductMutation();
-    const { data: products, isLoading, error } = useGetProductQuery(parseInt(id as string));
-    // console.log(products);
-
-    if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>Error</div>;
-    useEffect(() => {
-        reset(products);
-    }, [products]);
-
-
-    const onSubmit: SubmitHandler<IProduct> = (data: any) => {
-        try {
-            editProduct(data)
-            navigate("/admin/products")
-        } catch (error) {
-
-        }
+    const onSubmit: SubmitHandler<IProduct> = (data) => {
+        editProduct(data)
+        navigate("/admin/products")
     };
+    useEffect(() => {
+        (async () => {
+            const { payload: products } = await dispatch(fetchProduct(id));
+            reset(products as IProduct);
+        })();
+    }, [id]);
+    // const [editProduct] = useEditProductMutation();
+
+
+    // const onSubmit: SubmitHandler<IProduct> = (data: any) => {
+    //     try {
+    //         editProduct(data)
+    //         navigate("/admin/products")
+    //     } catch (error) {
+
+    //     }
+    // };
     return (
         <div>
             <form action="" onSubmit={handleSubmit(onSubmit)}>
+                <label htmlFor="">Tên Sản Phẩm</label><br />
                 <input type="text" {...register("name", { required: true })} />
                 {errors.name && <span>Bắt buộc phải nhập trường này!</span>}<br />
+                <label htmlFor="">Giá</label><br />
                 <input type="number" {...register("price", { required: true })} />
                 {errors.price && <span>Bắt buộc phải nhập trường này!</span>}<br />
+                <label htmlFor="">Ảnh</label><br />
+                <input type="file" {...register("image")} />
+                {/* {errors.price && <span>Bắt buộc phải nhập trường này!</span>}<br /> */}
+                <label htmlFor="">Số Lượng</label><br />
                 <input type="number" {...register("quantity", { required: true })} />
                 {errors.quantity && <span>Bắt buộc phải nhập trường này!</span>}<br />
+                <label htmlFor="">Mô tả</label><br />
+                <input type="string" {...register("description", { required: true })} />
+                {errors.description && <span>Bắt buộc phải nhập trường này!</span>}<br />
                 <button>Submit</button>
             </form>
         </div>

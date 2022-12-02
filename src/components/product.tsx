@@ -1,11 +1,14 @@
+import { DeleteOutlined } from "@ant-design/icons";
+import { Button, message, Popconfirm } from "antd";
 import { useGetProductsQuery, useRemoveProductMutation } from "../apiSlice/product";
 import { IProduct } from "../interfaces/product";
-type ProductProps = {
-    products: IProduct[]
-}
+import { Link } from "react-router-dom";
 
-const Product = (props: ProductProps) => {
+
+const Product = () => {
     const { data: products = [], isLoading, error } = useGetProductsQuery();
+    // console.log(products);
+
     const [removeProduct] = useRemoveProductMutation();
     // const getData = () => {
     // return products.map((product) => ({
@@ -16,11 +19,11 @@ const Product = (props: ProductProps) => {
     // }));
     // };
 
-    // const confirm = (id: any) => {
-    //     // console.log(id);
-    //     removeProduct(id);
-    //     message.info("Xoá Sản Phẩm Thành Công!!!");
-    // };
+    const removeItem = (id: any) => {
+        // console.log(id);
+        removeProduct(id);
+        message.info("Xoá Sản Phẩm Thành Công!!!");
+    };
     if (isLoading) return <div>Loading...</div>;
     if (error) return <div>Error</div>;
     return (
@@ -62,8 +65,8 @@ const Product = (props: ProductProps) => {
                             </td>
                             <td className="px-16 py-2 flex flex-row items-center">
                                 <img
-                                    className="h-8 w-8 rounded-full object-cover "
-                                    src="{products.image}"
+                                    className="h-24 w-24  "
+                                    src={product.image}
                                     alt=""
                                 />
                             </td>
@@ -80,6 +83,19 @@ const Product = (props: ProductProps) => {
                             </td>
 
                             <td className="px-16 py-2">
+                                <button><Link to={`${product.id}/update`}>Sửa </Link> </button>
+                                <a>
+                                    <Popconfirm
+                                        placement="top"
+                                        title="Bạn có chắc chắn muốn xóa không?"
+                                        onConfirm={() => removeItem(product.id)}
+                                        okText="Đồng Ý"
+                                        cancelText="Cancel"
+                                    >
+                                        <Button type="primary" danger>
+                                            <DeleteOutlined />
+                                        </Button>
+                                    </Popconfirm></a>
                                 {/* <span className="text-yellow-500 flex">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
