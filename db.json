@@ -1,0 +1,55 @@
+{
+  "products": [
+    {
+      "name": "Assignment 2",
+      "price": "354524",
+      "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1669965711/hlh34x1zk39cy5m6zx2o.jpg",
+      "quantity": "3",
+      "description": "abcdefewfrgrerfewrg",
+      "id": 10
+    },
+    {
+      "name": "Hoàng Văn Trường",
+      "price": "4343",
+      "quantity": "4",
+      "description": "abcdefewfrgrerfewrg",
+      "id": 11
+    },
+    {
+      "name": "Khuong chuc",
+      "price": "354524",
+      "quantity": "3",
+      "description": "ádfghjkl",
+      "id": 12
+    },
+    {
+      "name": "hvt",
+      "price": "46536",
+      "quantity": "05",
+      "description": "abcdefewfrgrerfewrg",
+      "id": 13
+    },
+    {
+      "name": "Hoàng Văn Trường",
+      "price": "354524",
+      "quantity": "4",
+      "description": "abcdefewfrgrerfewrg",
+      "id": 14
+    },
+    {
+      "name": "Hoàng Văn Trường",
+      "price": "354524",
+      "quantity": "3",
+      "description": "abcdefewfrgrerfewrg",
+      "id": 15
+    },
+    {
+      "name": "Hoàng Văn Trường",
+      "price": "354524",
+      "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1669977171/tcjqed80wcftgqquhy2l.jpg",
+      "quantity": "3",
+      "description": "abcdef",
+      "id": 16
+    }
+  ]
+}
