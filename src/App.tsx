@@ -1,21 +1,25 @@
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import NotFound from "./components/NotFound";
 import Product from "./components/product";
 import ProductAdd from "./components/product-add";
 import ProductEdit from "./components/product-edit";
 import LayoutAdmin from "./layouts/LayoutAdmin";
 import LayoutWebsite from "./layouts/LayoutWebsite";
+import Homepage from "./layouts/layoutWebsite/Homepage";
 import PrivateLayout from "./layouts/PrivateLayout";
 import Login from "./pages/login";
+
 
 function App() {
     return (
         <div className="App">
             <Routes>
                 <Route path="/" element={<LayoutWebsite />}>
-                    <Route index element={<h1>Home Page</h1>} />
+                    <Route index element={< Homepage />} />
                     <Route path="about" element={<h1>About Page</h1>} />
                     <Route path="login" element={<Login />} />
                 </Route>
+                <Route path="*" element={<NotFound />} />
                 <Route
                     path="/admin"
                     element={
