@@ -1,0 +1,120 @@
+.btn {
+    padding: 0.9em 1.6em;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+   }
+   
+   .btn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(46, 46, 46);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+   }
+   /* glow */
+   .btn::before {
+    content: "";
+    background: linear-gradient(
+       45deg,
+       #FF0000, #002BFF, #FF00C8, #002BFF,
+         #FF0000, #002BFF, #FF00C8, #002BFF
+   );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+   }
+   
+   @keyframes glowing {
+    0% {
+     background-position: 0 0;
+    }
+   
+    50% {
+     background-position: 400% 0;
+    }
+   
+    100% {
+     background-position: 0 0;
+    }
+   }
+   
+   /* hover */
+   .btn:hover::before {
+    opacity: 1;
+   }
+   
+   .btn:active:after {
+    background: transparent;
+   }
+   
+   .btn:active {
+    color: #000;
+    font-weight: bold;
+   }
+   
+   
+.btnn {
+    padding: 1.1em 2em;
+    background: none;
+    border: 2px solid #fff;
+    font-size: 15px;
+    color: #131313;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+    background-color: #ecd448;
+    font-weight: bolder;
+    box-shadow: 0 2px 0 2px #000;
+   }
+   
+   .btnn:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120%;
+    background-color: #ff6700;
+    top: 50%;
+    transform: skewX(30deg) translate(-150%, -50%);
+    transition: all 0.5s;
+   }
+   
+   .btnn:hover {
+    background-color: #4cc9f0;
+    color: #fff;
+    box-shadow: 0 2px 0 2px #0d3b66;
+   }
+   
+   .btnn:hover::before {
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay: 0.1s;
+   }
+   
+   .btnn:active {
+    transform: scale(0.9);
+   }
+   hr .new1 {
+    border-top: 1px dashed red;
+  }

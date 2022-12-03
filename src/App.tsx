@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import NotFound from "./components/NotFound";
 import Product from "./components/product";
 import ProductAdd from "./components/product-add";
@@ -8,7 +8,7 @@ import LayoutWebsite from "./layouts/LayoutWebsite";
 import Homepage from "./layouts/layoutWebsite/Homepage";
 import PrivateLayout from "./layouts/PrivateLayout";
 import Login from "./pages/login";
-
+import './index.css'
 
 function App() {
     return (
