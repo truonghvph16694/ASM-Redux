@@ -1,14 +1,44 @@
 {
   "products": [
     {
-      "name": "Hoàng Văn Trường update",
-      "price": "354524112",
-      "image": {
-        "0": {}
-      },
-      "quantity": "11",
+      "name": "Assignment 2",
+      "price": "354524",
+      "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1669993327/hxk1mz8yuh94zpsj7lav.jpg",
+      "quantity": "3",
       "description": "abcdefewfrgrerfewrg",
-      "id": 20
+      "id": 23
+    },
+    {
+      "name": "hoàng văn thịnh",
+      "price": "122000",
+      "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1670031556/edsmounqntcdtvaoongl.jpg",
+      "quantity": "34",
+      "description": "abcdefewfrgrerfewrg",
+      "id": 24
+    },
+    {
+      "name": "Khuong chuc",
+      "price": "123.000",
+      "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1670031611/hqohp0qye3cilfk5frdk.jpg",
+      "quantity": "56",
+      "description": "Sản Phẩm Tốt",
+      "id": 25
+    },
+    {
+      "name": "Assignment 2",
+      "price": "333.000",
+      "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1670031638/jeriqlplqfkmyvnxgw0w.png",
+      "quantity": "56",
+      "description": "Sản Phẩm Tốt",
+      "id": 26
+    },
+    {
+      "name": "Product 1",
+      "price": "666.000",
+      "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1670032166/svvl6nl7pwgd0yxwlfch.jpg",
+      "quantity": "12",
+      "description": "Sản Phẩm Tốt",
+      "id": 27
     }
   ]
 }
