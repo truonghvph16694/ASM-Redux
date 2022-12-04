@@ -47,39 +47,42 @@ const Homepage = () => {
 
 
             <h1 className="text-center text-2xl sm:text-4xl py-10 font-medium">SẢN PHẨM NỔI BẬT</h1>
-            <div className="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-3 text-center mx-6 sm:mx-48 gap-x-10 gap-y-5 my-10">
+            <div className=" grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-3 text-center mx-6 sm:mx-48 gap-x-10 gap-y-5 my-10">
                 {products.map((product: any) => (
-                    <div className="border border-2 shadow-lg rounded-lg py-10">
+                    <div className="card border border-2 shadow-lg rounded-lg py-10">
+                        <Link to={`detail/${product.id}`}>
+                            <div className=" col-span-4 sm:col-span-4 md:col-span-2 lg:col-span-1 xl:col-span-1 flex flex-col items-center" key={product.id}>
 
-                        <div className=" col-span-4 sm:col-span-4 md:col-span-2 lg:col-span-1 xl:col-span-1 flex flex-col items-center" key={product.id}>
-                            <div className="bg-white rounded-xl mt-5">
-                                <img
-                                    src={product.image}
-                                    className="h-40 rounded-md"
-                                    alt=""
-                                />
-                            </div>
-                            <div className="bg-transparent shadow-lg rounded-lg -mt-4 w-64">
-                                <div className="py-5 px-5">
-                                    <span className="font-bold text-gray-800 text-xl">{product.name}</span>
-                                    <div className="flex items-center justify-between">
-                                        <div className="text-sm text-gray-600 font-light">
-                                            M-L-XL
-                                        </div>
-                                        <div className="text-2xl text-red-600 font-bold">
-                                            {product.price}.vnđ
+                                <div className="bg-white rounded-xl mt-5">
+                                    <img
+                                        src={product.image}
+                                        className="h-40 rounded-md"
+                                        alt=""
+                                    />
+                                </div>
+                                <div className="bg-transparent shadow-lg rounded-lg -mt-4 w-64">
+                                    <div className="py-5 px-5">
+                                        <span className="font-bold text-gray-800 text-xl"> {product.name} </span>
+                                        <div className="flex items-center justify-between">
+                                            <div className="text-sm text-gray-600 font-light">
+                                                M-L-XL
+                                            </div>
+                                            <div className="text-2xl text-red-600 font-bold">
+                                                {product.price}₫
+                                            </div>
+
                                         </div>
 
                                     </div>
 
                                 </div>
+                                <br />
+                                <div className="">
+                                    <button className="btnn w-29"> Mua Ngay</button>
+                                </div>
+                            </div>
+                        </Link>
 
-                            </div>
-                            <br />
-                            <div className="">
-                                <button className="btnn w-29"> Mua Ngay</button>
-                            </div>
-                        </div>
                     </div>
                 ))}
             </div>

@@ -1,16 +1,15 @@
 import { Breadcrumb, Layout } from "antd";
 import { Outlet } from "react-router-dom";
 import MenuAdmin from "../components/MenuAdmin";
-import MenuAdminTop from "../components/MenuAdminTop";
-
+import { Link } from "react-router-dom";
 const { Header, Content, Sider } = Layout;
 
 const LayoutAdmin = () => {
     return (
         <Layout style={{ height: "125vh" }}>
-            <Header className="header">
-                <div className="logo" />
-                <MenuAdminTop />
+            <Header className="header flex">
+                <Link to={"/"}> <img src="https://scontent.fhan3-5.fna.fbcdn.net/v/t1.6435-9/94036243_2899534036805595_1800758643365249024_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=7rSsNzjF8wkAX_AL98w&_nc_ht=scontent.fhan3-5.fna&oh=00_AfBOd8de0L6tUQNviOjCIQ6FgRGcm7hNW6S_C98KPo582g&oe=63B2747F" className="ml-4 h-12 sm:h-16" alt="Flowbite Logo" /></Link>
+                <span className="self-center text-xl font-semibold whitespace-nowrap text-white font-serif ml-4">Hoàng Trường Shop</span>
             </Header>
             <Layout>
                 <Sider width={200} className="site-layout-background">
@@ -18,9 +17,9 @@ const LayoutAdmin = () => {
                 </Sider>
                 <Layout style={{ padding: "0 24px 24px" }}>
                     <Breadcrumb style={{ margin: "16px 0" }}>
-                        <Breadcrumb.Item>Home</Breadcrumb.Item>
-                        <Breadcrumb.Item>List</Breadcrumb.Item>
-                        <Breadcrumb.Item>App</Breadcrumb.Item>
+                        <Breadcrumb.Item>Admin</Breadcrumb.Item>
+                        <Breadcrumb.Item></Breadcrumb.Item>
+                        <Breadcrumb.Item></Breadcrumb.Item>
                     </Breadcrumb>
                     <Content
                         className="site-layout-background"

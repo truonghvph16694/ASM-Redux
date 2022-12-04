@@ -1,4 +1,5 @@
-import { LaptopOutlined, NotificationOutlined, UserOutlined } from "@ant-design/icons";
+import { LaptopOutlined, UnorderedListOutlined, UserOutlined, WomanOutlined, PlusOutlined } from "@ant-design/icons";
+
 import { Menu } from "antd";
 import { Link } from "react-router-dom";
 const MenuAdmin = () => {
@@ -11,14 +12,26 @@ const MenuAdmin = () => {
             </Menu.Item>
             <Menu.Item>
                 <Link to="/admin/products">
-                    <NotificationOutlined />
-                    Sản phẩm
+                    <WomanOutlined />  Sản phẩm
                 </Link>
             </Menu.Item>
-            <Menu.SubMenu title="sub menu">
+            <Menu.Item>
+                <Link to="/admin/categories">
+                    <UnorderedListOutlined />
+                    Danh mục
+                </Link>
+            </Menu.Item>
+            <Menu.SubMenu title="Create">
+
                 <Menu.Item>
                     <Link to="/admin/products/add">
                         <UserOutlined /> Thêm sản phẩm
+                    </Link>
+                </Menu.Item>
+                <Menu.Item>
+
+                    <Link to="/admin/categories/add">
+                        Thêm danh mục
                     </Link>
                 </Menu.Item>
             </Menu.SubMenu>

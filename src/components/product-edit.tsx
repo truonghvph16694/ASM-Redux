@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
+import { upload } from "../api/product";
 import { useEditProductMutation, useGetProductQuery } from "../apiSlice/product";
 import { useAppDispatch } from "../app/hook";
 import { IProduct } from "../interfaces/product";
@@ -20,27 +21,28 @@ const ProductEdit = (props: Props) => {
     const dispatch = useAppDispatch();
     const { id } = useParams();
     const [editProduct] = useEditProductMutation();
-    const onSubmit: SubmitHandler<IProduct> = (data) => {
-        editProduct(data)
-        navigate("/admin/products")
+    const onSubmit: SubmitHandler<IProduct> = async (products: IProduct) => {
+        try {
+            const formData = new FormData()
+            formData.append("file", products.image[0]);
+            formData.append("upload_preset", "s44cgkqu");
+            formData.append("cloud_name", "dufcivzn4");
+            const image = await upload(formData)
+            console.log(image);
+
+            editProduct({ ...products, image: image.url })
+            navigate("/admin/products")
+        } catch (error) {
+
+        }
     };
     useEffect(() => {
         (async () => {
-            const { payload: products } = await dispatch(fetchProduct(id));
+            const { payload: products } = await dispatch(fetchProduct(id as any));
             reset(products as IProduct);
         })();
     }, [id]);
-    // const [editProduct] = useEditProductMutation();
 
-
-    // const onSubmit: SubmitHandler<IProduct> = (data: any) => {
-    //     try {
-    //         editProduct(data)
-    //         navigate("/admin/products")
-    //     } catch (error) {
-
-    //     }
-    // };
     return (
         <div>
             <form action="" onSubmit={handleSubmit(onSubmit)}>
