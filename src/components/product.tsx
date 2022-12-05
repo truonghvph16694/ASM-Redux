@@ -30,7 +30,7 @@ const Product = () => {
                 <thead className="justify-between">
                     <tr className="bg-green-600">
                         <th className="px-16 py-2">
-                            <span className="text-gray-100 font-semibold">Image</span>
+                            <span className=" text-gray-100 font-semibold">Image</span>
                         </th>
                         <th className="px-16 py-2">
                             <span className="text-gray-100 font-semibold">Tên Sản Phẩm</span>
@@ -62,7 +62,7 @@ const Product = () => {
                             </td>
                             <td className="px-16 py-2 flex flex-row items-center">
                                 <img
-                                    className="h-24 w-24  "
+                                    className="h-54 w-64  "
                                     src={product.image}
                                     alt=""
                                 />

@@ -63,6 +63,38 @@
       "quantity": "12",
       "description": "Chất vải thoáng mát dễ chịu cho cơ thể!",
       "id": 31
+    },
+    {
+      "name": "Áo dài Aristino AAD00402",
+      "price": "999.000",
+      "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1670216109/lfmhjc6y7uisf8pw7hfz.jpg",
+      "quantity": "22",
+      "description": "Thiết kế đường cắt may khéo léo trên nền vải gấm sang trọng, hình thêu tinh tế với biểu tượng chim Hạc đại diện cho may mắn và hạnh phúc, tô đậm nét truyền thống vào bức tranh Tết đến xuân về.",
+      "id": 38
+    },
+    {
+      "name": "Áo Blazer Aristino ABZ00908",
+      "price": "1999.000",
+      "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1670216207/b33clcgwaqhvs298qtca.jpg",
+      "quantity": "33",
+      "description": " Áo blazer với phom dáng Regular Fit dễ mặc với nhiều dáng người",
+      "id": 39
+    },
+    {
+      "name": "Cà vạt Aristino Boss 1TI00602",
+      "price": "850.000",
+      "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1670216282/pw9ssaja9n6h6tfep3fe.jpg",
+      "quantity": "19",
+      "description": "Thiết kế thời trang với màu sắc lịch lãm kết hợp họa tiết kẻ cam dệt jacquard trên nền xanh tím than ấn tượng và độc đáo.",
+      "id": 40
+    },
+    {
+      "name": "Cặp da nam Aristino ABC00801",
+      "price": "899.000",
+      "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1670216425/bwjjqarjzfleuegp5k7p.jpg",
+      "quantity": "05",
+      "description": "Cặp da nam thiết kế nhỏ gọn phù hợp với những người yêu thích sự đơn giản, tiện lợi. Cặp có thể xách tay hoặc đeo vai với đai tháo rời.",
+      "id": 41
     }
   ],
   "categories": [
@@ -80,6 +112,21 @@
       "name": "Quần",
       "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1670184882/wkuen6ru4lr6j48jumnl.jpg",
       "id": 3
+    },
+    {
+      "name": "Túi Sách",
+      "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1670216497/vanuyemadnfuglrktmbz.jpg",
+      "id": 4
+    },
+    {
+      "name": "Cà Vạt",
+      "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1670216518/eraofkabakqfrnxpbsmf.jpg",
+      "id": 5
+    },
+    {
+      "name": "Áo Dài",
+      "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1670216536/n0etxorh9hsxdxvvie9h.jpg",
+      "id": 6
     }
   ]
 }

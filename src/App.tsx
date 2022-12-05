@@ -9,8 +9,10 @@ import ProductEdit from "./components/product-edit";
 import './index.css';
 import LayoutAdmin from "./layouts/LayoutAdmin";
 import LayoutWebsite from "./layouts/LayoutWebsite";
+import CategoryPage from "./layouts/layoutWebsite/CategoryPage";
 import Homepage from "./layouts/layoutWebsite/Homepage";
 import ProductDetail from "./layouts/layoutWebsite/ProductDetail";
+import ProductPage from "./layouts/layoutWebsite/ProductPage";
 import PrivateLayout from "./layouts/PrivateLayout";
 import Signin from "./pages/signin";
 import Signup from "./pages/signup";
@@ -23,8 +25,10 @@ function App() {
                 <Route path="signup" element={<Signup />} />
                 <Route path="/" element={<LayoutWebsite />}>
                     <Route index element={< Homepage />} />
-                    <Route path="/detail/:id" element={<ProductDetail />} />
+                    <Route path="product/detail/:id" element={<ProductDetail />} />
                     <Route path="about" element={<h1>About Page</h1>} />
+                    <Route path="product" element={< ProductPage />} />
+                    <Route path="categories" element={< CategoryPage />} />
 
                 </Route>
                 <Route path="*" element={<NotFound />} />
