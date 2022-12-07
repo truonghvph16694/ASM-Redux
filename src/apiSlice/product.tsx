@@ -39,9 +39,6 @@ export const productApi = createApi({
             }),
             invalidatesTags: ['Product'],
         }),
-        // upload: builder.mutation<IProduct, IProduct>({
-
-        // })
     })
 });
 export const { useGetProductsQuery,

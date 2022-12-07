@@ -131,13 +131,6 @@
   ],
   "users": [
     {
-      "email": "truonghvph16694@fpt.edu.vn",
-      "password": "$2a$10$6HQKvo91A0b2Sk3NPoBj5OKPqKSVsuRfnL6lhELoeKxEwcDOOAFRq",
-      "name": "Hoàng Văn Trường",
-      "role": 0,
-      "id": 1
-    },
-    {
       "email": "dunghtph18929@fpt.edu.vn",
       "password": "$2a$10$V91Y7VbZgQnI.m3VzDDnle5UjDRfW1.rAadGhiUqUPQ4lL3XG2f5K",
       "name": "Khuong chuc",
@@ -150,13 +143,6 @@
       "name": "Admin",
       "role": 1,
       "id": 3
-    },
-    {
-      "email": "ab@gmail.com",
-      "password": "$2a$10$6DL77s/wxPnXTqUNu0GZuutIpz1n669RpbfC.szz20cKHfie4V7MO",
-      "name": "Khuong chuc",
-      "role": "0",
-      "id": 4
     }
   ]
 }

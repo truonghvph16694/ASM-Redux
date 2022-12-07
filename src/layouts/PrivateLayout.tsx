@@ -1,14 +1,19 @@
-import React from "react";
-import { Navigate } from "react-router-dom";
+import React from 'react'
+import { Navigate } from 'react-router-dom';
+import { isAuthenticate } from '../utils/localstorage';
 
-type LayoutPrivateProps = {
-    children: React.ReactElement;
-};
+type PrivateRouterProps = {
+    children: JSX.Element
+}
 
-const PrivateLayout = ({ children }: LayoutPrivateProps) => {
-    const isAdmin = true;
-    if (!isAdmin) return <Navigate to="/login" />;
-    return children;
-};
+const PrivateRouter = (props: PrivateRouterProps) => {
+    const { user: { role } } = isAuthenticate();
+    console.log(role);
 
-export default PrivateLayout;
+    if (!role) {
+        return <Navigate to="/" />
+    }
+    return props.children
+}
+
+export default PrivateRouter

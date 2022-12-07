@@ -1,5 +1,6 @@
-export interface IAuth {
-    username?: string;
-    email: string;
-    password: string;
+export type IAuth ={
+    name: string,
+    emai: string,
+    password:string | number,
+    role: number
 }

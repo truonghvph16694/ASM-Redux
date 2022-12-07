@@ -70,7 +70,7 @@ const Product = () => {
 
 
                             <td className="px-16 py-2">
-                                <span >{product.price}</span>
+                                <span >{product.price}₫</span>
                             </td>
                             <td className="px-16 py-2">
                                 <span>{product.quantity}</span>

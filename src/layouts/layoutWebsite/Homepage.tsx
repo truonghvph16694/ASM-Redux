@@ -64,10 +64,10 @@ const Homepage = () => {
                                     <div className="py-5 ">
                                         <span className="font-bold text-gray-800 text-xl"> {product.name} </span>
                                         <div className="flex items-center justify-between">
-                                            <div className="text-sm text-gray-600 font-light">
+                                            <div className="text-sm text-gray-600 font-light ml-4">
                                                 M-L-XL
                                             </div>
-                                            <div className="text-2xl text-red-600 font-bold">
+                                            <div className="text-2xl text-red-600 font-bold mr-2">
                                                 {product.price}₫
                                             </div>
 

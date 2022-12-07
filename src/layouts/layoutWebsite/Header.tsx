@@ -74,10 +74,10 @@ const HeaderWebsite = (props: Props) => {
                             </svg> */}
                         </div>
                         <div className="hidden lg:block">
-                            <ul className="flex items-center space-x-10">
+                            <ul className="flex items-center space-x-10 ">
                                 <li>
                                     <Link to="/">
-                                        <a className="dark:text-white dark:hover:text-gray-300 text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
+                                        <a className="dark:text-white dark:hover:text-gray-300 text-base text-red-600 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">
                                             Home
                                         </a>
                                     </Link>
