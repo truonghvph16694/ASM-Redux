@@ -3,7 +3,7 @@
     {
       "name": "ÁO SƠ MI HOA XÁM ASM064",
       "price": "255.000",
-      "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1670074872/d30hb4seg5xhr8rfmcqy.jpg",
+      "image": "http://res.cloudinary.com/dufcivzn4/image/upload/v1670400655/ljc9f7f78lxe4fq4mokq.jpg",
       "quantity": "13",
       "description": "Chất vải cotton thoáng mát.",
       "id": 33
@@ -157,6 +157,20 @@
       "name": "Khuong chuc",
       "role": "0",
       "id": 4
+    },
+    {
+      "email": "aa@gmail.com",
+      "password": "$2a$10$2IpjS2Qm4x/h2hD2JppavOv8GC06VdcykhG.MeSoOOI0PJA0F6wrO",
+      "name": "Khuong chuc",
+      "role": "0",
+      "id": 5
+    },
+    {
+      "email": "aaaa@gmail.com",
+      "password": "$2a$10$x.fJriKO.XHnwxnMSvNGze67pWcdK4oIdlzaeBtVLnBlJ0D9zsUb.",
+      "name": "Hoàng Văn Trường",
+      "role": "0",
+      "id": 6
     }
   ]
 }

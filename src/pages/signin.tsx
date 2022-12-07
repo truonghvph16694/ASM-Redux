@@ -1,3 +1,4 @@
+import { message } from 'antd'
 import React from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router-dom'
@@ -18,6 +19,7 @@ const Signin = () => {
 
     const onSubmit: SubmitHandler<FormInputs> = async (data: any) => {
         const { data: user } = await signin(data);
+        message.info("Welcome to Hoàng Trường Shop!!!");
         localStorage.setItem('user', JSON.stringify(user))
         navigate('/admin')
     }
@@ -57,7 +59,7 @@ const Signin = () => {
 
                     <div className="self-start hidden lg:flex flex-col  text-white mt-8 text">
                         <h1 className=" font-bold text-3xl">Hi ? Welcome
-                            <br /> <br /><h2 className='text-red-500 font-bold text-5xl ml-8'>Hoàng Trường Shop </h2></h1>
+                            <br /> <br /><h2 className='text-red-500 font-bold text-5xl ml-8'>Hoàng Trường Shop❤️ </h2></h1>
                         <p className="pr-3">Lorem ipsum is placeholder text commonly used in the graphic, print,
                             and publishing industries for previewing layouts and visual mockups</p>
                     </div>

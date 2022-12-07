@@ -25,7 +25,7 @@ export const upload = (data : any) =>{
     }).then((resp) => resp.json())
 }
 export const searchFullText = (keyword:any) => {
-    const url = `/search?q=${keyword}`
+    const url = `/search?_expand=role&q=${keyword}`
     return instance.post(url)
 }
 export const read = (_id: any) => {

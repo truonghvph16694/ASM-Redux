@@ -17,7 +17,7 @@ const HeaderWebsite = (props: Props) => {
     const Navigate = useNavigate()
     const changePage = (e: any) => {
         e.preventDefault();
-        Navigate(`/product?q=${keyword}`)
+        Navigate(`/product?_expand=role&q=${keyword}`)
     }
 
     return (
@@ -36,7 +36,7 @@ const HeaderWebsite = (props: Props) => {
                             <form onSubmit={changePage}>
                                 {/* <input type="text" onChange={changeKeyword} placeholder="Search for products" className="bg-transparent text-sm text-gray-600 focus:outline-none" /> */}
 
-                                <input type="text" placeholder=" Search For Product" name="text" className="inputsearch"></input>
+                                <input type="text" onChange={changeKeyword} placeholder=" Search For Product" name="text" className="inputsearch"></input>
                             </form>
                         </div>
                         <button onClick={() => setShowMenu(true)} aria-label="Open Menu" className="text-gray-800 dark:text-white hidden md:block lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-800 rounded">
@@ -121,6 +121,11 @@ const HeaderWebsite = (props: Props) => {
                             </div>
                         </div>
                     </div>
+                    <div>
+                        <button className="buttonn btn-shine">
+                            <span className='font-bold text-xl'><Link to={"signin"}>Login</Link></span>
+                        </button>
+                    </div>
 
                     <style>
                         {` /* width */
@@ -139,16 +144,16 @@ const HeaderWebsite = (props: Props) => {
                 }
 `}
                     </style>
-                    <button onClick={() => setShowMenuSm(true)} aria-label="open menu" className="text-gray-800 dark:text-white md:hidden focus:outline-none focus:ring-2 focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
+                    {/* <button onClick={() => setShowMenuSm(true)} aria-label="open menu" className="text-gray-800 dark:text-white md:hidden focus:outline-none focus:ring-2 focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
                         <svg className="fill-stroke" width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 6H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M10 12H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M6 18H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
-                    </button>
+                    </button> */}
                 </div>
             </div>
-            <div id="md-menu" className={`${showMenu ? "md:block" : ""} hidden lg:hidden absolute z-10 inset-0 h-screen w-full dark:bg-gray-800 bg-gray-800 bg-opacity-70 dark:bg-opacity-70`}>
+            {/* <div id="md-menu" className={`${showMenu ? "md:block" : ""} hidden lg:hidden absolute z-10 inset-0 h-screen w-full dark:bg-gray-800 bg-gray-800 bg-opacity-70 dark:bg-opacity-70`}>
                 <div className="relative w-full h-screen">
                     <div className="absolute inset-0 w-1/2 bg-white dark:bg-gray-900 p-6 justify-center">
                         <div className="flex items-center justify-between border-b pb-4 border-gray-200 dark:border-gray-700">
@@ -224,9 +229,9 @@ const HeaderWebsite = (props: Props) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* Search menu */}
-            <div id="mobile-search-menu" className={`${search ? "flex" : "hidden"} md:hidden absolute inset-0 z-10 flex-col w-full h-screen bg-white dark:bg-gray-900 pt-4`}>
+            {/* <div id="mobile-search-menu" className={`${search ? "flex" : "hidden"} md:hidden absolute inset-0 z-10 flex-col w-full h-screen bg-white dark:bg-gray-900 pt-4`}>
                 <div className="w-full">
                     <div className="flex items-center justify-between border-b border-gray-200 pb-3 mx-4">
                         <div className="flex items-center space-x-3 mx-2">
@@ -323,9 +328,9 @@ const HeaderWebsite = (props: Props) => {
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> */}
             {/* Main Menu */}
-            <div id="mobile-menu" className={`${showMenuSm ? "flex" : "hidden"} md:hidden absolute inset-0 z-10 flex-col w-full h-screen bg-white pt-4`}>
+            {/* <div id="mobile-menu" className={`${showMenuSm ? "flex" : "hidden"} md:hidden absolute inset-0 z-10 flex-col w-full h-screen bg-white pt-4`}>
                 <div className="w-full">
                     <div className="flex items-center justify-between border-b border-gray-200 pb-4 mx-4">
                         <div />
@@ -339,8 +344,8 @@ const HeaderWebsite = (props: Props) => {
                             </svg>
                         </button>
                     </div>
-                </div>
-                <div className="mt-6 mx-4">
+                </div> */}
+            {/* <div className="mt-6 mx-4">
                     <ul className="flex flex-col space-y-8">
                         <li className="flex items-center justify-between">
                             <a href="javascript:void(0)" className="text-base text-gray-800 focus:outline-none dark:text-white focus:ring-2 focus:ring-gray-800 hover:underline">
@@ -393,8 +398,8 @@ const HeaderWebsite = (props: Props) => {
                             </button>
                         </li>
                     </ul>
-                </div>
-                <div className="w-full h-full flex items-end">
+                </div> */}
+            {/* <div className="w-full h-full flex items-end">
                     <ul className="bg-gray-50 dark:bg-gray-800 py-10 px-4 flex flex-col space-y-8 w-full">
                         <li>
                             <a className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline" href="javascript:void(0)">
@@ -425,9 +430,9 @@ const HeaderWebsite = (props: Props) => {
                             </a>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </div>
+                </div> */}
+            {/* </div> */}
+        </div >
     )
 }
 
