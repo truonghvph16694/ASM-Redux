@@ -3,23 +3,16 @@ import { Button, message, Popconfirm } from "antd";
 import { useGetProductsQuery, useRemoveProductMutation } from "../apiSlice/product";
 import { IProduct } from "../interfaces/product";
 import { Link } from "react-router-dom";
-const Product = () => {
-    const { data: products = [], isLoading, error } = useGetProductsQuery();
+import { useGetCategoriesQuery, useRemoveCategoryMutation } from "../apiSlice/category";
+const Category = () => {
+    const { data: categories = [], isLoading, error } = useGetCategoriesQuery();
     // console.log(products);
 
-    const [removeProduct] = useRemoveProductMutation();
-    // const getData = () => {
-    // return products.map((product) => ({
-    //     key: product.id,
-    //     name: product.name,
-    //     price: product.price,
-    //     quantity: product.quantity,
-    // }));
-    // };
+    const [removeCategory] = useRemoveCategoryMutation();
 
     const removeItem = (id: any) => {
         // console.log(id);
-        removeProduct(id);
+        removeCategory(id);
         message.info("Xoá Sản Phẩm Thành Công!!!");
     };
     if (isLoading) return <div>Loading...</div>;
@@ -30,24 +23,11 @@ const Product = () => {
                 <thead className="justify-between">
                     <tr className="bg-green-600">
                         <th className="px-16 py-2">
-                            <span className=" text-gray-100 font-semibold">Image</span>
-                        </th>
-                        <th className="px-16 py-2">
                             <span className="text-gray-100 font-semibold">Tên Sản Phẩm</span>
                         </th>
-
                         <th className="px-16 py-2">
-                            <span className="text-gray-100 font-semibold">Giá</span>
+                            <span className="text-gray-100 font-semibold">Image</span>
                         </th>
-
-                        <th className="px-16 py-2">
-                            <span className="text-gray-100 font-semibold">Số Lượng</span>
-                        </th>
-
-                        <th className="px-16 py-2">
-                            <span className="text-gray-100 font-semibold">Mô tả</span>
-                        </th>
-
                         <th className="px-16 py-2">
                             <span className="text-gray-100 font-semibold">Action</span>
                         </th>
@@ -55,37 +35,26 @@ const Product = () => {
                 </thead>
 
                 <tbody className="bg-gray-200">
-                    {products.map((product: any) => (
-                        <tr className="bg-white border-b-2 border-gray-200" key={product.id}>
-                            <td>
-                                <div >{product.name}</div>
+                    {categories.map((category: any) => (
+                        <tr className="bg-white border-b-2 border-gray-200" key={category.id}>
+                            <td >
+                                <div className="ml-16" >{category.name}</div>
                             </td>
                             <td className="px-16 py-2 flex flex-row items-center">
                                 <img
-                                    className="h-54 w-64  "
-                                    src={product.image}
+                                    className="h-24 w-24  "
+                                    src={category.image}
                                     alt=""
                                 />
                             </td>
 
-
                             <td className="px-16 py-2">
-                                <span >{product.price}₫</span>
-                            </td>
-                            <td className="px-16 py-2">
-                                <span>{product.quantity}</span>
-                            </td>
-                            <td className="px-16 py-2">
-                                <span>{product.description}</span>
-                            </td>
-
-                            <td className="px-16 py-2">
-                                <button className="w-10 h-10"> <Link to={`${product.id}/update`}><EditTwoTone /> </Link> </button>
+                                <button className="w-10 h-10"> <Link to={`${category.id}/update`}><EditTwoTone /> </Link> </button>
                                 <a>
                                     <Popconfirm
                                         placement="top"
                                         title="Bạn có chắc chắn muốn xóa không?"
-                                        onConfirm={() => removeItem(product.id)}
+                                        onConfirm={() => removeItem(category.id)}
                                         okText="Đồng Ý"
                                         cancelText="Cancel"
                                     >
@@ -133,4 +102,4 @@ const Product = () => {
     );
 };
 
-export default Product;
+export default Category;

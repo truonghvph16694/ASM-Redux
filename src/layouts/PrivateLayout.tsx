@@ -1,19 +1,19 @@
-import React from "react";
-import { Navigate } from "react-router-dom";
-import { useAppSelector } from "../app/hook";
+import React from 'react'
+import { Navigate } from 'react-router-dom';
+import { isAuthenticate } from '../utils/localstorage';
 
-type PrivateLayoutProps = {
-    children: React.ReactElement;
-};
+type PrivateRouterProps = {
+    children: JSX.Element
+}
 
-const PrivateLayout = ({ children }: PrivateLayoutProps) => {
-    // get gia tri tu localStorage
-    // hoac get State isLogin | userInfo tu redux store
-    // const isAuth = useAppSelector((state) => state.auth.isAuth);
+const PrivateRouter = (props: PrivateRouterProps) => {
+    const { user: { role } } = isAuthenticate();
+    console.log(role);
 
-    // if (!isAuth) return <Navigate to="/login" />;
+    if (!role) {
+        return <Navigate to="/" />
+    }
+    return props.children
+}
 
-    return children;
-};
-
-export default PrivateLayout;
+export default PrivateRouter

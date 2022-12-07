@@ -24,3 +24,11 @@ export const upload = (data : any) =>{
         body: data,
     }).then((resp) => resp.json())
 }
+export const searchFullText = (keyword:any) => {
+    const url = `/search?_expand=role&q=${keyword}`
+    return instance.post(url)
+}
+export const read = (_id: any) => {
+    const url = `/product/${_id}`;
+    return instance.get(url);
+}
